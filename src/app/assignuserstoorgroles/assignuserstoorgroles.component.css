@@ -15,15 +15,13 @@
 }
 #racfid{
     border-radius: 5px;
-    width: 200px;
 }
 #name{
     border-radius: 5px;
-    width: 200px;
 }
 #orgroles{
     border-radius: 5px;
-    width: 610px;
+    margin-left: -15px;
 }
 #availableUsers{
     border-radius: 5px; 
