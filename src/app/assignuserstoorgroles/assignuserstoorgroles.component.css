@@ -1,0 +1,33 @@
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+#title{
+    color: navy;
+    text-align: center;
+    margin-top: -30px;
+}
+#availableUsers{
+    /* min-width: 377px; */
+     min-height: 152px; 
+   
+}
+#selectedUsers{
+    /* min-width: 382px; */
+     min-height: 152px; 
+}
+#racfid{
+    border-radius: 5px;
+    width: 200px;
+}
+#name{
+    border-radius: 5px;
+    width: 200px;
+}
+#orgroles{
+    border-radius: 5px;
+    width: 610px;
+}
+#availableUsers{
+    border-radius: 5px; 
+}
+#selectedUsers{
+    border-radius: 5px;
+}

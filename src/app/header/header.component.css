@@ -1,0 +1,18 @@
+#header{
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+#title{
+    margin-top: 15px;
+    color: green;
+  }
+#welcome{
+  margin-right: 5%;
+  color: blue;
+}
+#unit{
+  margin-right: 5%;
+}
+#logo:hover{
+  cursor: pointer;
+}

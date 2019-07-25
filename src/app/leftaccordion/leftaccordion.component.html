@@ -1,0 +1,98 @@
+<ul class="accordion">
+  <li>
+    <a class="toggle" (click)="showHideProcessMapAccordion()">Process Map/Selection</a>
+    <ul class="inner" [hidden]="processMapAccordion">
+      <li><a href="#">Add Non-Local Users</a></li>
+      <li><a href="#">Add or Modify Org roles</a></li>
+      <li><a (click)="goToAssignUsersToOrgRoles()">Assign Users to Org Roles</a></li>
+      <li><a href="#">View Course Catalog Table</a></li>
+      <li><a href="#">Assign Course Codes to org Roles</a></li>
+      <li><a href="#">Assign Course Codes to Employees (Add / Drop)</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a class="toggle" (click)="showHideGotoRolesAccordion()">Roles</a>
+    <ul class="inner" [hidden]="gotoRolesAccordion">
+      <li><a href="#">Add or Modify Org Roles</a></li>
+      <li><a (click)="goToAssignUsersToOrgRoles()">Assign Users to Org Roles</a></li>
+      <li>
+        <a class="toggle" (click)="showHideManageUsersAccordion()">Manage Users</a>
+        <ul class="inner" [hidden]="manageUsersAccordion">
+          <li><a href="#">Manage Non-Local Users</a></li>
+          <li><a href="#">View All Users</a></li>
+          <li><a href="#">View Users with NO ORG Roles Assigned</a></li>
+          <li><a href="#">Assign Users as SME's etc.</a></li>
+          <li><a href="#">Review HR Changes</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <a class="toggle" (click)="showHideGotoTrainingDBAccordion()">Training DB</a>
+    <ul class="inner" [hidden]="gotoTrainingDBAccordion">
+      <li><a href="#">View Course Catalog Table (See Mary to Revise)</a></li>
+      <li><a href="#">Assign Course Codes to ORG Roles</a></li>
+      <li><a href="#">Assign Course Codes to Employees</a></li>
+      <li>
+        <a class="toggle" (click)="showHideGotoReportsAndListsAccordion()">Reports and lists</a>
+        <ul class="inner" [hidden]="gotoReportsAndListsAccordion">
+          <li><a href="#">Report Users Assigned by Site Team Member</a></li>
+          <li><a href="#">Report All Users Assigned to Course Codes</a></li>
+          <li><a href="#">Report Users Assigned by Manager</a></li>
+          <li><a href="#">Number of People Assigned to Course Codes</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="toggle" (click)="showHideGotoDivisionaReportsAccordion()">Divisonal Reports</a>
+        <ul class="inner" [hidden]="gotoDivisionaReportsAccordion">
+          <li><a href="#">SAP Course Code to Org Role Review</a></li>
+          <li><a href="#">SAP Course Code By Module with Detail</a></li>
+          <li><a href="#">SAP Course Code By Module without Detail</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="toggle" (click)=" showHideGotoMarysReportsAndListAccordion()">Mary's Reports and list</a>
+        <ul class="inner" [hidden]="gotoMarysReportsAndListAccordion">
+          <li><a href="#">SOutput Employees for Training</a></li>
+          <li><a href="#">Output Training Requirements (No -Z records)</a></li>
+          <li><a href="#">Output Training Requirements (All records)</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <a class="toggle" (click)="viewAllUsers()">View All Users</a>
+    <ul class="inner"></ul>
+  </li>
+
+  <li>
+    <a class="toggle" (click)="showHideReports()">Reports</a>
+    <ul class="inner" [hidden]="reportsAccordion">
+      <li><a href="#">HR Audit</a></li>
+      <li><a href="#">Assign Site Team Member and Team</a></li>
+      <li><a href="#">View Users Missing org Roles</a></li>
+      <li><a href="#">General Edit of All Users</a></li>
+      <li><a href="#">Assign as SME, etc</a></li>
+      <li><a href="#">Users Assigned to an org Role</a></li>
+      <li><a href="#">Users Assigned to BW Roles</a></li>
+      <li><a href="#">Org Role/Assigned But No Security Template</a></li>
+      <li><a href="#">Org role / Template Analysis</a></li>
+      <li><a href="#">Security Templates – No usage</a></li>
+      <li><a href="#">Sec Templates – User Assignment</a></li>
+      <li><a href="#">Org Roles – No Users Assigned</a></li>
+      <li><a href="#">Org Roles – No Sec Templates</a></li>
+      <li><a href="#">Org Roles – No Course Codes</a></li>
+      <li><a href="#">Users Assigned to Courses</a></li>
+      <li><a href="#">Course Codes Not Used</a></li>
+      <li><a href="#">Course Hours by Org Role Summary</a></li>
+    </ul>
+  </li>
+  <li>
+    <a class="toggle" href="javascript:void(0);" (click)="logout()">Logout</a>
+    <ul class="inner">
+    </ul>
+  </li>
+</ul>

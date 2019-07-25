@@ -1,0 +1,37 @@
+  ul {
+    list-style: none;
+    padding: 0;
+
+  }
+  ul li {
+    margin: .5em 0;
+  }
+  ul .inner {
+    padding-left: 1em;
+    overflow: hidden;
+  }
+  .inner li a:hover{
+    color: blue;
+    font-weight: bold;
+    cursor: pointer;
+  } 
+  #main{
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  ul li .toggle{
+    width: 96%;
+    display: block;
+    background: green;
+    color: #fefefe;
+    padding: .75em;
+    border-radius: 10px;
+    transition: background .3s ease;
+    margin: 5px 5px 5px -10px;
+  }
+  ul li .toggle:hover {
+    background: yellow;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+  }
