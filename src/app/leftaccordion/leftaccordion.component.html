@@ -4,7 +4,7 @@
     <ul class="inner" [hidden]="processMapAccordion">
       <li><a href="#">Add Non-Local Users</a></li>
       <li><a href="#">Add or Modify Org roles</a></li>
-      <li><a (click)="goToAssignUsersToOrgRoles()">Assign Users to Org Roles</a></li>
+      <li><a [routerLink]="'/assignuserstoorgroles'">Assign Users to Org Roles</a></li>
       <li><a href="#">View Course Catalog Table</a></li>
       <li><a href="#">Assign Course Codes to org Roles</a></li>
       <li><a href="#">Assign Course Codes to Employees (Add / Drop)</a></li>
@@ -64,14 +64,14 @@
   </li>
 
   <li>
-    <a class="toggle" (click)="viewAllUsers()">View All Users</a>
+    <a class="toggle" [routerLink]="'/viewallusers'">View All Users</a>
     <ul class="inner"></ul>
   </li>
 
   <li>
     <a class="toggle" (click)="showHideReports()">Reports</a>
     <ul class="inner" [hidden]="reportsAccordion">
-      <li><a href="#">HR Audit</a></li>
+      <li><a (click)="viewusers()">HR Audit</a></li>
       <li><a href="#">Assign Site Team Member and Team</a></li>
       <li><a href="#">View Users Missing org Roles</a></li>
       <li><a href="#">General Edit of All Users</a></li>
@@ -96,3 +96,4 @@
     </ul>
   </li>
 </ul>
+<!-- <app-exampletable></app-exampletable>  -->

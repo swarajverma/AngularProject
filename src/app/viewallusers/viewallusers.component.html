@@ -1,94 +1,47 @@
-<div class="mat-elevation-z8 data-table row">
-  <div class="col-md-4 col-sm-10 col-lg-10">
-  <table class="full-width-table" mat-table [dataSource]="dataSource" matSort aria-label="Elements">
-    <!-- RACFID Column -->
-    <ng-container matColumnDef="RACFID">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>RACFID</th>
-      <td mat-cell *matCellDef="let row">{{row.RACFID}}</td>
-    </ng-container>
+<div class="example-header">
 
-    <!-- LastName Column -->
-    <ng-container matColumnDef="LastName">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>LastName</th>
-      <td mat-cell *matCellDef="let row">{{row.LastName}}</td>
-    </ng-container>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
 
-    <!-- FirstName Column -->
-    <ng-container matColumnDef="FirstName">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>FirstName</th>
-        <td mat-cell *matCellDef="let row">{{row.FirstName}}</td>
-      </ng-container>
+</div>
 
-      <!-- MI Column -->
-    <ng-container matColumnDef="MI">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>MI</th>
-        <td mat-cell *matCellDef="let row">{{row.MI}}</td>
-      </ng-container>
+<div class="example-container mat-elevation-z8">
 
-      <!-- EmployeeType Column -->
-    <ng-container matColumnDef="EmployeeType">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>EmployeeType</th>
-        <td mat-cell *matCellDef="let row">{{row.EmployeeType}}</td>
-      </ng-container>
+<mat-table [dataSource]="dataSource" matSort>
 
-      <!-- OrganizationalRole Column -->
-    <ng-container matColumnDef="OrganizationalRole">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>OrganizationalRole</th>
-        <td mat-cell *matCellDef="let row">{{row.OrganizationalRole}}</td>
-      </ng-container>
+  <!-- Address Column -->
+  <ng-container matColumnDef="racfid">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> RACFID </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.racfid}} </mat-cell>
+  </ng-container>
 
-      <!-- JobPosition Column -->
-    <ng-container matColumnDef="JobPosition">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>JobPosition</th>
-        <td mat-cell *matCellDef="let row">{{row.JobPosition}}</td>
-      </ng-container>
+  <!-- Bank ID Column -->
+  <ng-container matColumnDef="lastname">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> LastName </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.lastname}} </mat-cell>
+  </ng-container>
 
-      <!-- SAPTeam1 Column -->
-    <ng-container matColumnDef="SAPTeam1">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>SAPTeam1</th>
-        <td mat-cell *matCellDef="let row">{{row.SAPTeam1}}</td>
-      </ng-container>
+  <!-- Name Column -->
+  <ng-container matColumnDef="firstname">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> FirstName </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.firstname}} </mat-cell>
+  </ng-container>
 
-      <!-- SiteTeamMember Column -->
-    <ng-container matColumnDef="SiteTeamMember">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>SiteTeamMember</th>
-        <td mat-cell *matCellDef="let row">{{row.SiteTeamMember}}</td>
-      </ng-container>
+  <!-- City Column -->
+  <ng-container matColumnDef="mi">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> MI </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.mi}} </mat-cell>
+  </ng-container>
 
-      <!-- Dept Column -->
-    <ng-container matColumnDef="Dept">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Dept</th>
-        <td mat-cell *matCellDef="let row">{{row.Dept}}</td>
-      </ng-container>
+  <!-- District Column -->
+  <ng-container matColumnDef="employee_type">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> EmployeeType </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.employee_type}} </mat-cell>
+  </ng-container>
 
-      <!-- Shift Column -->
-    <ng-container matColumnDef="Shift">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Shift</th>
-        <td mat-cell *matCellDef="let row">{{row.Shift}}</td>
-      </ng-container>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;">
+  </mat-row>
+</mat-table>
 
-      <!-- Manager Column -->
-    <ng-container matColumnDef="Manager">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Manager</th>
-        <td mat-cell *matCellDef="let row">{{row.Manager}}</td>
-      </ng-container>
-
-      <!-- SME Column -->
-    <ng-container matColumnDef="SME">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>SME</th>
-        <td mat-cell *matCellDef="let row">{{row.SME}}</td>
-      </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-  </div>
-  
-
-  <mat-paginator #paginator
-      [length]="dataSource.data.length"
-      [pageIndex]="0"
-      [pageSize]="10"
-      [pageSizeOptions]="[15, 20, 25]">
-  </mat-paginator>
+<mat-paginator [pageSizeOptions]="[5, 10, 15, 20]"></mat-paginator>
 </div>

@@ -1,0 +1,47 @@
+<div class="example-header">
+
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  
+</div>
+
+<div class="example-container mat-elevation-z8">
+
+  <mat-table [dataSource]="dataSource" matSort>
+
+    <!-- Address Column -->
+    <ng-container matColumnDef="racfid">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> RACFID </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.racfid}} </mat-cell>
+    </ng-container>
+
+    <!-- Bank ID Column -->
+    <ng-container matColumnDef="lastname">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> LastName </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.lastname}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="firstname">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> FirstName </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.firstname}} </mat-cell>
+    </ng-container>
+
+    <!-- City Column -->
+    <ng-container matColumnDef="mi">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> MI </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.mi}} </mat-cell>
+    </ng-container>
+
+    <!-- District Column -->
+    <ng-container matColumnDef="employee_type">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> EmployeeType </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.employee_type}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;">
+    </mat-row>
+  </mat-table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 15, 20]"></mat-paginator>
+</div>

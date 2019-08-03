@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import { UserService } from '../service/user.service';
-import { User } from '../user';
+/* import { User } from '../user'; */
 import { OAuthService, JwksValidationHandler } from 'angular-oauth2-oidc';
 
 @Component({
@@ -10,10 +10,10 @@ import { OAuthService, JwksValidationHandler } from 'angular-oauth2-oidc';
 })
 export class HeaderComponent{
 
-  public users: User;
+  /* public users: User; */
   //  constructor(private userService: UserService) { }
    constructor(public oauthService:OAuthService) {  
-    this.users=new User();
+    /* this.users=new User(); */
     
   }
 

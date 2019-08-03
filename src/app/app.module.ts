@@ -6,13 +6,12 @@ import { HeaderComponent } from './header/header.component';
 import { LeftaccordionComponent } from './leftaccordion/leftaccordion.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AssignuserstoorgrolesComponent } from './assignuserstoorgroles/assignuserstoorgroles.component';
-import { UserService } from './service/user.service';
 import { HttpClientModule } from '@angular/common/http';
-
 import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { ViewallusersComponent } from './viewallusers/viewallusers.component';
+import { ExampletableComponent } from './exampletable/exampletable.component';
 
 
 export function onAuthRequired({ oktaAuth, router }) {
@@ -31,6 +30,7 @@ const ROUTES: Routes=[
     LeftaccordionComponent,
     AssignuserstoorgrolesComponent,
     ViewallusersComponent,
+    ExampletableComponent,
     
 
   ],
@@ -45,7 +45,7 @@ const ROUTES: Routes=[
     MatPaginatorModule,
     MatSortModule,
   ],
-  providers: [UserService],
+  providers: [ExampletableComponent],
   bootstrap: [AppComponent]
  
 })

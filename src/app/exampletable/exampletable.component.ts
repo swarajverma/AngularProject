@@ -1,13 +1,14 @@
 import {Component, ViewChild} from '@angular/core';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import { ViewallusersService } from '../services/viewallusers.service';
+import { Type } from '@angular/compiler';
 
 @Component({
-  selector: 'app-viewallusers',
-  templateUrl: './viewallusers.component.html',
-  styleUrls: ['./viewallusers.component.css']
+  selector: 'app-exampletable',
+  templateUrl: './exampletable.component.html',
+  styleUrls: ['./exampletable.component.css']
 })
-export class ViewallusersComponent  {
+export class ExampletableComponent  {
 
   displayedColumns = ['racfid', 'lastname', 'firstname', 'mi', 'employee_type'];
   dataSource: MatTableDataSource<users>;
