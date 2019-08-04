@@ -12,7 +12,10 @@
 }
 #orgroles{
     border-radius: 5px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1d6f9e9ff2dc98fd8be3ba027f3605df6a1a916f
     margin-left: -15px;
 }
 #availableUsers{
@@ -21,5 +24,9 @@
 }
 #selectedUsers{
     border-radius: 5px;
+<<<<<<< HEAD
     min-height: 150px;
 } 
+=======
+}
+>>>>>>> 1d6f9e9ff2dc98fd8be3ba027f3605df6a1a916f
