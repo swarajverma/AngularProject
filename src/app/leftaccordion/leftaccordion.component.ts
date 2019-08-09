@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { OAuthService } from 'angular-oauth2-oidc';
-import { ViewallusersService } from '../services/viewallusers.service';
+import { UsersService } from '../services/users.service';
 import { MatPaginator, MatSort } from '@angular/material';
-import { ExampletableComponent } from '../exampletable/exampletable.component';
+import { ExampletableComponent } from '../user/exampletable/exampletable.component';
 
 @Component({
   selector: 'app-leftaccordion',
@@ -15,7 +15,7 @@ export class LeftaccordionComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private router: Router, public oauthService: OAuthService,private exmptable: ExampletableComponent, private viewallusersService: ViewallusersService) {}
+  constructor(private router: Router, public oauthService: OAuthService,private exmptable: ExampletableComponent, private viewallusersService: UsersService) {}
   
   ngOnInit() {
   }
@@ -87,10 +87,10 @@ export class LeftaccordionComponent implements OnInit {
     this.oauthService.logOut();
   }
 
-  viewusers() {
+  /* viewusers() {
     this.viewallusersService.viewAllUsers().subscribe(response => {
       console.log("Service Response - "+JSON.stringify(response));
     });
     console.log("web service output" + JSON.stringify(this.exmptable.dataSource));
-  }
+  } */
 }

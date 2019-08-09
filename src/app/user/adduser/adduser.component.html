@@ -1,0 +1,80 @@
+<div class="jumbotron container">
+  <h3> ADD NON-LOCAL USER </h3>
+  <div [hidden]="submitted" style="width: 300px;">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="racfid">RACFID:</label>
+        <input type="text" class="form-control" id="racfid" required [(ngModel)]="user.racfid" name="racfid">
+      </div>
+
+      <div class="form-group">
+        <label for="lastname">Last Name:</label>
+        <input type="text" class="form-control" id="lastname" required [(ngModel)]="user.lastname" name="lastname">
+      
+        <label for="firstname">First Name:</label>
+        <input type="text" class="form-control" id="firstname" required [(ngModel)]="user.firstname" name="firstname">
+      </div>
+
+      <div class="form-group">
+        <label for="mi">MI:</label>
+        <input type="text" class="form-control" id="mi" required [(ngModel)]="user.mi" name="mi">
+      </div>
+
+      <div class="form-group">
+        <label for="employeetype">Employee Type:</label>
+        <input type="text" class="form-control" id="employeetype" required [(ngModel)]="user.employeetype"
+          name="employeetype">
+      </div>
+
+      <div class="form-group">
+        <label for="organizationalrole">Organizational Role:</label>
+        <input type="text" class="form-control" id="organizationalrole" required [(ngModel)]="user.organizationalrole"
+          name="organizationalrole">
+      </div>
+
+      <div class="form-group">
+        <label for="jobposition">Job Position:</label>
+        <input type="text" class="form-control" id="jobposition" required [(ngModel)]="user.jobposition"
+          name="jobposition">
+      </div>
+
+      <div class="form-group">
+        <label for="sapteam1">SAPTeam1:</label>
+        <input type="text" class="form-control" id="sapteam1" required [(ngModel)]="user.sapteam1" name="sapteam1">
+      </div>
+
+      <div class="form-group">
+        <label for="siteteammember">SiteTeamMember:</label>
+        <input type="text" class="form-control" id="siteteammember" required [(ngModel)]="user.siteteammember"
+          name="siteteammember">
+      </div>
+
+      <div class="form-group">
+        <label for="dept">Department:</label>
+        <input type="text" class="form-control" id="dept" required [(ngModel)]="user.dept" name="dept">
+      </div>
+
+      <div class="form-group">
+        <label for="shift">Shift:</label>
+        <input type="text" class="form-control" id="shift" required [(ngModel)]="user.shift" name="shift">
+      </div>
+
+      <div class="form-group">
+        <label for="manager">Manager:</label>
+        <input type="text" class="form-control" id="manager" required [(ngModel)]="user.manager" name="manager">
+      </div>
+
+      <div class="form-group">
+        <label for="sme">SME:</label>
+        <input type="text" class="form-control" id="sme" required [(ngModel)]="user.sme" name="sme">
+      </div>
+
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted">
+    <h4>Added new user successfully!</h4>
+    <button class="btn btn-success" (click)="newUser()">Add</button>
+  </div>
+</div>

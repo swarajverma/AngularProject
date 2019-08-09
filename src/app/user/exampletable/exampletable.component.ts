@@ -1,13 +1,14 @@
 import {Component, ViewChild} from '@angular/core';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
-import { ViewallusersService } from '../services/viewallusers.service';
+import { UsersService } from '../../services/users.service';
+import { Type } from '@angular/compiler';
 
 @Component({
-  selector: 'app-viewallusers',
-  templateUrl: './viewallusers.component.html',
-  styleUrls: ['./viewallusers.component.css']
+  selector: 'app-exampletable',
+  templateUrl: './exampletable.component.html',
+  styleUrls: ['./exampletable.component.css']
 })
-export class ViewallusersComponent  {
+export class ExampletableComponent  {
 
   displayedColumns = ['racfid', 'lastname', 'firstname', 'mi', 'employee_type'];
   dataSource: MatTableDataSource<users>;
@@ -17,7 +18,7 @@ export class ViewallusersComponent  {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private viewallusersService: ViewallusersService) {
+  constructor(private viewallusersService: UsersService) {
      this.viewallusersService.viewAllUsers().subscribe((users1) => {
      this.dataSource = new MatTableDataSource<any>(users1);
     }); 

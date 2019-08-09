@@ -10,8 +10,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OAuthModule } from 'angular-oauth2-oidc';
-import { ViewallusersComponent } from './viewallusers/viewallusers.component';
-import { ExampletableComponent } from './exampletable/exampletable.component';
+import { ViewallusersComponent } from './user/viewallusers/viewallusers.component';
+import { ExampletableComponent } from './user/exampletable/exampletable.component';
+import { AdduserComponent } from './user/adduser/adduser.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 export function onAuthRequired({ oktaAuth, router }) {
@@ -20,7 +23,8 @@ export function onAuthRequired({ oktaAuth, router }) {
 
 const ROUTES: Routes=[
   {path:'assignuserstoorgroles', component: AssignuserstoorgrolesComponent},
-  {path:'viewallusers', component: ViewallusersComponent}
+  {path:'viewallusers', component: ViewallusersComponent},
+  {path: 'adduser', component:AdduserComponent}
 ]
 
 @NgModule({
@@ -31,6 +35,7 @@ const ROUTES: Routes=[
     AssignuserstoorgrolesComponent,
     ViewallusersComponent,
     ExampletableComponent,
+    AdduserComponent,
     
 
   ],
@@ -44,6 +49,7 @@ const ROUTES: Routes=[
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    FormsModule,
   ],
   providers: [ExampletableComponent],
   bootstrap: [AppComponent]
