@@ -1,14 +1,16 @@
+table {
+  width: 100%;
+  height: 500px;
+}
 .container{
   border: 1px solid black;
   border-radius: 5px;
   margin-top: 15px;
 }
 .example-container {
-  display: flex;
-  flex-direction: column;
-  /* min-width: 300px; */
-  flex-basis: 300px;
+  flex: 1 0 600px;
 }
+
 
 .example-header {
   min-height: 64px;
@@ -27,8 +29,9 @@
   text-align: center;
 } */
 .mat-table {
-  overflow: auto;
-  max-height: 500px;
+  width: 100%;
+  overflow: scroll;
+  height: 500px;
 }
 #search{
   border-radius: 5px;
@@ -42,43 +45,43 @@
 }
 
 .mat-column-racfid {
-  flex: 0 50 100px;
+  flex: 1 0 120px;
 }
 .mat-column-lastname {
-  flex: 0 50 100px;
+  flex: 1 0 120px;
 }
 .mat-column-firstname {
-  flex: 0 50 100px;
+  flex: 1 0 120px;
 }
 .mat-column-mi {
-  flex: 0 50 50px;
+  flex: 1 0 50px;
 }
 .mat-column-employeetype {
-  flex: 0 50 120px;
+  flex: 1 0 150px;
 }
 .mat-column-organizationalrole {
-  flex: 0 50 154px;
+  flex: 1 0 180px;
 }
 .mat-column-jobposition {
-  flex: 0 50 100px;
+  flex: 1 0 120px;
 }
 .mat-column-sapteam1 {
-  flex: 0 50 100px;
+  flex: 1 0 120px;
 }
 .mat-column-siteteammember {
-  flex: 0 50 150px;
+  flex: 1 0 170px;
 }
 .mat-column-dept {
-  flex: 0 50 65px;
+  flex: 1 0 80px;
 }
 .mat-column-shift {
-  flex: 0 50 45px;
+  flex: 1 0 80px;
 }
 .mat-column-manager {
-  flex: 0 50 100px;
+  flex: 1 0 120px;
 }
 .mat-column-sme {
-  flex: 0 50 100px;
+  flex: 1 0 120px;
 }
 
 mat-cell {
