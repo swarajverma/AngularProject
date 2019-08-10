@@ -7,8 +7,12 @@ table {
   border-radius: 5px;
   margin-top: 15px;
 }
+.table-container {
+  overflow: scroll;
+}
 .example-container {
   flex: 1 0 600px;
+  overflow: auto;
 }
 
 
@@ -29,9 +33,9 @@ table {
   text-align: center;
 } */
 .mat-table {
-  width: 100%;
-  overflow: scroll;
   height: 500px;
+  table-layout: fixed;
+  width: 100%;
 }
 #search{
   border-radius: 5px;
@@ -85,8 +89,6 @@ table {
 }
 
 mat-cell {
-  margin-left: 10px;
-  border-right: 1px solid grey;
   align-self: stretch;
   text-align: center;
 }
@@ -96,8 +98,3 @@ mat-cell {
   text-overflow: ellipsis;
   white-space: nowrap;
 } */
-
-#first-mat-col{
-  /* border-left: 1px solid black; */
-  padding-right: 10px;
-}

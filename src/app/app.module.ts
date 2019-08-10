@@ -14,6 +14,8 @@ import { ViewallusersComponent } from './user/viewallusers/viewallusers.componen
 import { ExampletableComponent } from './user/exampletable/exampletable.component';
 import { AdduserComponent } from './user/adduser/adduser.component';
 import { FormsModule } from '@angular/forms';
+import { DataTableModule } from 'angular7-data-table';
+
 
 
 
@@ -50,6 +52,7 @@ const ROUTES: Routes=[
     MatPaginatorModule,
     MatSortModule,
     FormsModule,
+    DataTableModule.forRoot()
   ],
   providers: [ExampletableComponent],
   bootstrap: [AppComponent]
